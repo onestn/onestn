@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+I'm dead-line(Wonseok Yang)
+
 <!--
 **dead-1ine/dead-1ine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
