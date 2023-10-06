@@ -1,8 +1,9 @@
 ### Hi there 👋
 
-I'm dead-line(Wonseok Yang)
+I'm dead-line(Wonseok Yang).
+I'm a Data Engineer in South Korea
 
-<!--
+<!-- 
 **dead-1ine/dead-1ine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
