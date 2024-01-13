@@ -12,7 +12,6 @@ BOT_NAME = "wanted"
 SPIDER_MODULES = ["wanted.spiders"]
 NEWSPIDER_MODULE = "wanted.spiders"
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "wanted (+http://www.yourdomain.com)"
 
@@ -20,7 +19,14 @@ NEWSPIDER_MODULE = "wanted.spiders"
 LOG_LEVEL = "INFO"
 
 # Set user-agent like a browser on osx
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+# Activate scrapy-playwright
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
