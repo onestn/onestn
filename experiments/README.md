@@ -6,3 +6,4 @@
 4. [Prefect]()
 5. [Dagster]()
 6. [Pandas]()
+7. [Scrapy]()
