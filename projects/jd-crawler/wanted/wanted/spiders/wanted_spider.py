@@ -1,6 +1,7 @@
 import scrapy
 
 
+# TODO: Change url in Request()
 class WantedSpider(scrapy.Spider):
     name='wanted'
 
