@@ -3,3 +3,6 @@
 
 # Ignore datasets
 **/data/
+
+# logs from rust
+**/target/
