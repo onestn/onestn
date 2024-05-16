@@ -6,3 +6,6 @@
 
 # logs from rust
 **/target/
+
+# VSCode
+.vscode/
