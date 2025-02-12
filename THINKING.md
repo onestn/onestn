@@ -1,5 +1,0 @@
-- 2024.09.30:
-    - KOR: Code에서 Logic과 Data를 분명하게 나누어 사용하면 읽기 훨씬 편하다. 
-        -> 함수형 프로그래밍 공부하고 싶네.
-    - ENG: Cleary separating logic and data in code makes it much more readable.
-        -> I feel like studying functional programming.
