@@ -7,5 +7,10 @@
 # logs from rust
 **/target/
 
+# logs from airflow
+contribution/apache-airflow/logs/
+contribution/apache-airflow/airflow.cfg
+contribution/apache-airflow/airflow.db
+
 # VSCode
 .vscode/
