@@ -10,6 +10,7 @@ from uuid import uuid4
 from airflow.configuration import conf
 from airflow.exceptions import AirflowException, AirflowProviderDeprecationWarning
 from airflow.models import BaseOperator
+from airflow.providers.amazon.aws.operators.base_aws import AwsBaseOperator
 from airflow.providers.amazon.aws.hooks.emr import EmrContainerHook, EmrHook, EmrServerlessHook
 from airflow.providers.amazon.aws.links.emr import (
     EmrClusterLink,
@@ -42,37 +43,9 @@ if TYPE_CHECKING:
     from airflow.utils.context import Context
 
 
-class EmrServerlessCreateApplicationOperator(BaseOperator):
+class EmrServerlessCreateApplicationOperator(AwsBaseOperator[EmrServerlessHook]):
     """
     Operator to create Serverless EMR Application.
-
-    .. seealso::
-        For more information on how to use this operator, take a look at the guide:
-        :ref:`howto/operator:EmrServerlessCreateApplicationOperator`
-
-    :param release_label: The EMR release version associated with the application.
-    :param job_type: The type of application you want to start, such as Spark or Hive.
-    :param wait_for_completion: If true, wait for the Application to start before returning. Default to True.
-        If set to False, ``waiter_max_attempts`` and ``waiter_delay`` will only be applied when
-        waiting for the application to be in the ``CREATED`` state.
-    :param client_request_token: The client idempotency token of the application to create.
-      Its value must be unique for each request.
-    :param config: Optional dictionary for arbitrary parameters to the boto API create_application call.
-    :param aws_conn_id: The Airflow connection used for AWS credentials.
-        If this is None or empty then the default boto3 behaviour is used. If
-        running Airflow in a distributed manner and aws_conn_id is None or
-        empty, then default boto3 configuration would be used (and must be
-        maintained on each worker node).
-    :param waiter_countdown: (deprecated) Total amount of time, in seconds, the operator will wait for
-        the application to start. Defaults to 25 minutes.
-    :param waiter_check_interval_seconds: (deprecated) Number of seconds between polling the state
-        of the application. Defaults to 60 seconds.
-    :waiter_max_attempts: Number of times the waiter should poll the application to check the state.
-        If not set, the waiter will use its default value.
-    :param waiter_delay: Number of seconds between polling the state of the application.
-    :param deferrable: If True, the operator will wait asynchronously for application to be created.
-        This implies waiting for completion. This mode requires aiobotocore module to be installed.
-        (default: False, but can be overridden in config file by setting default_deferrable to True)
     """
 
     def __init__(
