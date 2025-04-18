@@ -293,6 +293,12 @@ class EmrServerlessHook(AwsBaseHook):
 
         return count
 
+    def create_application(application_id: str):
+        pass
+
+    def start_application(application_id: str):
+        pass
+
 
 class EmrContainerHook(AwsBaseHook):
     """
