@@ -1,0 +1,9 @@
+[package]
+name = "exp_opendal"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+object_store = "0.11.0"
+# object_store_opendal = "xxx"
+# opendal = { version = "xxx", features = ["services-s3"] }
