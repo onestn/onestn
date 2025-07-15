@@ -20,5 +20,3 @@ value_without_return = function_without_return()
 print("Value without RETURN:")
 print(value_without_return)
 
-
-
