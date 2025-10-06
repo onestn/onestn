@@ -1,4 +1,5 @@
 // https://ziglang.org/learn/samples/
+// Using `std.heap.GeneralPurposeAllocator` you can track double frees and memory leaks.
 
 const std = @import("std");
 
