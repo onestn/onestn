@@ -17,8 +17,8 @@ df = pl.DataFrame({
 })
 print(df)
 
-# df.write_csv('../data/output.csv')
-# df_csv = pl.read_csv('../data/output.csv', try_parse_dates=True)
+df.write_csv('../data/output.csv')
+df_csv = pl.read_csv('../data/output.csv', try_parse_dates=True)
 
 result = df.select(
     col('name'),
