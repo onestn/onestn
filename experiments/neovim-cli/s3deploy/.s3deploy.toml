@@ -1,0 +1,9 @@
+[[mappings]]
+local_prefix = "emr"
+bucket = "emr-bucket"
+strip_prefix = true # Remove "emr/" part
+
+[[mappings]]
+local_prefix = "airflow/dags"
+bucket = "airflow-bucket"
+key_prefix = "dags"
